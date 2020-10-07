@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DoW_Hun ## HTB Tutorials</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="HTB, Hackthebox, tutorial, tutorials, megoldások">
+  <meta content="" name="Ezen az oldalon magyar nyelven mutatom be nektek a Hack The Box platform Challange megoldásait">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!--/ Navigációs mező /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">J. Norbert</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">Rólam</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Tapasztalatok</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Certificates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Navigációs mező vége /-->
+
+  <!--/ Intro Felület /-->
+  <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4"><a id="hello" href="#about">Üdvözöllek</a> az oldalamon</h1><br>
+          <h3>Minden ami Web Security, Web Dev és {HTB} itt megtalálod</h3>
+          <p class="intro-subtitle"><span class="text-slider-items">Kezdő Etikus Hacker,Web Development,Web Design,Frontend Development,Kezdő Web Sec Auditor</span><strong class="text-slider"></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Felület vége /-->
+
+  <!--/ Magamról szekció /-->
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Járfás Norbert</span></p>
+                      <p><span class="title-s">Profile: </span> <span>Web Sec / Audit, Web Dev</span></p>
+                      <p><span class="title-s">OS: </span> <span>Win10 / Kali Linux / Parrot OS</span></p>
+                      <p><span class="title-s">Email: </span> <span>U have to find it</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Tapasztalat</p>
+                  <span>HTML</span> <span class="pull-right">65%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>CSS3</span> <span class="pull-right">60%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>PHP</span> <span class="pull-right">15%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>Python 3</span> <span class="pull-right">25%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>JAVASCRIPT</span> <span class="pull-right">40%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                    </div>
+                  <span>Meteor.js</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                    </div>
+                  <span>MongoDB</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                    </div>
+                    <span>Web Sec</span> <span class="pull-right">30%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                    </div>
+                    <span>Web Audit</span> <span class="pull-right">10%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Magamról
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    Köszöntelek az oldalamon. Ha idáig eljutottál bizonyára ugyan annyira érdekel a Cybersecurity mint engem.
+                    Az elmúlt időszakban sok IT területen szereztem több kevesebb tapasztalatot, melyhez a kezdő lökést az
+                    "Újratervezés" program adta meg. Ezen képzés alatt szereztem Frontend (HTML5, CSS3, Bootstrap, JavaScript) tapasztalatokat
+                    valamint Back-End oldalon (jQuery) tapasztalatokat.
+                  </p>
+                  <p class="lead">
+                    Innét pedig nem volt megállás így fejlődni kezdtem, PHP, Python nyelven. Fejlesztettem a frontend tapasztalataimat MeteorJS 
+                    segítségével valamint MongoDB vel Back-End oldalon. Valamint Online tanusítványt szereztem "WebFlow" alkalmazásból és "Git verzió követésből".
+                    Mivel az érdeklődésem ezek után leginkább az IT Sec irányba fordult így ennek a szakiránynak a kiaknázása a célom. A legtöbb ezirányú tapasztalatomat
+                    autódidakta módon önfejlesztés révén tanultam eddig (Kali Linux, Parrot OS, Web sec apps, Web audit OWASP list).
+                  </p>
+                  <p class="lead">
+                    Ezen irányban megszereztem egy online tanusítványt "Win10 hack fizikai hozzáfárássel" valamint a lent látható CISCO Certificat-eket. 
+                    Ezek pedig az "Introduction to Packet Tracer" valamint a "Introduction to Cybersecurity". Mind két tanfolyamot 100% os vizsgákkal zártam. 
+                    Jelenleg a "Cybersecurity Essencials" CISCO tanfolyamot végzem és erősen készülök a C|EH v10 - Certified Ethical Hacker vizsgára.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Magamról szekció vége /-->
+
+  <!--/ Szolgáltatások Tapasztalatok Mező /-->
+  <section id="service" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Tapasztalatok
+            </h3>
+            <p class="subtitle-a">
+              Röviden olvashatsz a tapasztalataimról.
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-monitor"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Design</h2>
+              <p class="s-description text-center">
+                Hasznos tapasztalatok birtokában, ugyanakkor folyamatosan fejlődve fejlesztem
+                a Web Design területén szerzett ismereteimet.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-code-working"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Fejlesztés</h2>
+              <p class="s-description text-center">
+                Jelenlegi Web Fejlesztési tapasztalataimat naponta bővítem új és hasznos tudással,
+                hogy a mai elvárásoknak megfeleljen.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-android-film"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Videózás</h2>
+              <p class="s-description text-center">
+                Több éves videózási tapasztalattal rendelkezem. Legyen szó Web Design-ról vagy Blogról
+                egészen biztos, hogy színesebbé tudjuk varázsolni.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Responsive Design</h2>
+              <p class="s-description text-center">
+                A Reszponzív Design területén folyamatosan képzem magamat, hogy az elkészűlt honlapok ne csak böngészőben,
+                de a Mobile-First approach tekintetében mobilon is kivállóan jelenjenek meg.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-android-lock"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Security</h2>
+              <p class="s-description text-center">
+                A honlapok és hálózatok biztonsága számomra kiemelten fontos. Emiatt jelenleg kézem magam
+                az elismert C|EH v10 (Certified Ethical Hacker) tanusítvány irányába.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="ion-bug"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">Web Audit - OWASP</h2>
+              <p class="s-description text-center">
+                A biztonságos és egységes, honlap szerkesztés világában az OWASP egy eggyezményes kezdeményezés amely,
+                alapján HTML oldalak kerülnek Auditálásra a biztonságosság szemszögéből.
+                Így védekezve a Hacker támadások ellen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Szolgáltatások Tapasztlatok vége /-->
+
+  <!--/ Elvégzett munkák számláló (Még nem aktuális ha azzáválik aktiválni kell a szekciót) /-->
+  <!--/<div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">450</p>
+              <span class="counter-text">WORKS COMPLETED</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">15</p>
+              <span class="counter-text">YEARS OF EXPERIENCE</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-people"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">550</p>
+              <span class="counter-text">TOTAL CLIENTS</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+            </div>
+            <div class="counter-num">
+              <p class="counter">36</p>
+              <span class="counter-text">AWARD WON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>/-->
+
+  <!--/ Tanulmányok, Igazolások /-->
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Certificates
+            </h3>
+            <p class="subtitle-a">
+              Az elvégzett tanulmányaimat és igazolásaimat itt megtalálod.
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-1.jpg" width="350" height="218,75" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-1.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Újratervezés Program - Záróvizsga</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Full Stack alapok</span> 
+                      <br> 
+                      <span class="w-date">2020 Aug. 12</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Weblap készítés WebFlow használatával</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> 
+                      <br> 
+                      <span class="w-date">2020 Szept. 17</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-3.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-3.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Win10 Fizikai Hack</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">IT Security</span> 
+                      <br> 
+                      <span class="w-date">2020 Szept. 17</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-4.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">GitHub verzió követés</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">GIT</span> 
+                      <br>
+                      <span class="w-date">2020 Szept. 17</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-5.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-5.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Introduction to PT by CISCO</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">IoT / Network Simulation / PT</span> 
+                      <br>
+                      <span class="w-date">2020 Szept. 30</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="img/work-6.jpg" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <img src="img/work-6.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Introduction to Cybersecurity</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Cybersecurity/TD</span>
+                      <br>
+                      <span class="w-date">2020 Okt. 1</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!--/ Section Portfolio End /-->
+
+  <!--/ Section Blog Star /-->
+  <section id="blog" class="blog-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Blog
+            </h3>
+            <p class="subtitle-a">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href=""><img src="img/post-1.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Python</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="">Python Tutorial<br>Változók ... COMING SOON ...</a></h3>
+              <p class="card-description">
+                Ebben a blog bejegyzésben a Python Változók típusait vesszük górcső alá és megnézzük, hogy
+                milyen műveleteket tudunk velük végezni
+                és ezeket, hogyan tudjuk megjeleníteni.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Járfás Norbert</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> SOON<!--/10 min/--> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href=""><img src="img/post-2.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Ethical Hacking</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="">Mi is az a Pentest és az Etikus Hekkelés ... COMING SOON ...</a></h3>
+              <p class="card-description">
+                Szeretnél többet megtudni a Pentesztekről és az Etikus Hekkelésről?
+                Érdekel az IT SEC? WEB SEC? OWASP? Kali Linux? ParrotOS? vagy a Debian?
+                Nem tudod mik is ezek akkor olvasd el a bejegyzést.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Járfás Norbert</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> SOON<!--/10 min/-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href=""><img src="img/post-3.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">{HTB}</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="">Emdee Five - {HTB} Tippek<br> ... COMING SOON ...</a></h3>
+              <p class="card-description">
+                Az egyik legelső és olyan {HTB} feladat ami igényel egy meglehetősen tömör, de
+                ugyanakkor gyors Python Exploitot.
+                Érdekel a megoldás menete? Olvasd el a cikket.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Járfás Norbert</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> SOON<!--/10 min/-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/<div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html"><img src="img/post-3.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Web Design</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
+              <p class="card-description">
+                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                a pellentesque nec,
+                egestas non nisi.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Morgan Freeman</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>/-->
+  <!--/ Section Blog End /-->
+
+        <!--/<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6d986218-4c2a-41e1-9223-a120e46dcd88" data-share-badge-host="https://www.youracclaim.com" ></div>
+        <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="911c57fd-9cdd-4614-a88b-293a1b073a87" data-share-badge-host="https://www.youracclaim.com"></div>
+        <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>/-->
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <!-- Contact token DH+aqqcMKvDGum7ucxcMq9LaUGKdh35/-->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
